@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.grade.tracker.GradeTrackerController" spacing="10" padding="10">
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Student Name:" />
+        <TextField fx:id="studentNameField" />
+        <Button text="Add Student" onAction="#handleAddStudent" />
+    </HBox>
+    
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Select Student:" />
+        <ComboBox fx:id="studentComboBox" />
+        <Label text="Grade:" />
+        <TextField fx:id="gradeField" />
+        <Button text="Add Grade" onAction="#handleAddGrade" />
+    </HBox>
+    
+    <TableView fx:id="gradesTable">
+        <columns>
+            <TableColumn text="Student" fx:id="studentColumn" />
+            <TableColumn text="Grades" fx:id="gradesColumn" />
+            <TableColumn text="Average" fx:id="averageColumn" />
+            <TableColumn text="Highest" fx:id="highestColumn" />
+            <TableColumn text="Lowest" fx:id="lowestColumn" />
+        </columns>
+    </TableView>
+    
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Status:" />
+        <Label fx:id="statusLabel" />
+    </HBox>
+</VBox>
